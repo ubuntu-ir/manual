@@ -1,10 +1,11 @@
-\documentclass[a4paper, 12pt]{book}
+\documentclass[12pt]{book}
 
+\usepackage{shorttoc} % از این بسته برای ساختن فهرست کوتاه استفاده می‌گردد.
+%\usepackage{makeidx} % از این بسته برای ساختن نمایه استفاده می‌گردد.
 \usepackage{amsthm}
 \usepackage{geometry}
 \usepackage{color}
-% از این بسته برای محیط کدهای منبع، موجود در نوشته‌ها، استفاده می‌گردد.
-\usepackage{listings}
+\usepackage{listings} % از این بسته برای محیط کدهای منبع، موجود در نوشته‌ها، استفاده می‌گردد.
 \usepackage{hyperref}
 \usepackage{graphicx}
 \hypersetup{%
@@ -13,16 +14,11 @@
 
 \geometry{a4paper, tmargin=20mm, bmargin=20mm, lmargin=20mm, rmargin=20mm, footskip=10mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\sectionmark}[1]{%
+\renewcommand{\sectionmark}[1]{
 \markright{\thesection\ #1}}
-% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
-\usepackage[nottoc]{tocbibind}
-%
-% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
-%
-\newcommand\persiangloss[2]{#1\dotfill \lr{#2}\\}
-% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
-\newcommand\englishgloss[2]{#2\dotfill \lr{#1}\\}
+\usepackage[nottoc]{tocbibind} % بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+\newcommand\persiangloss[2]{#1\dotfill \lr{#2}\\} % دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\englishgloss[2]{#2\dotfill \lr{#1}\\} % دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{xepersian}
 \settextfont[Scale=1.0]{XB Niloofar}
@@ -60,6 +56,9 @@
 \newenvironment{example}[1]{\vspace{5pt} \noindent \textbf{مثال.}\ \ \textbf{#1}\newline}{\vspace{5pt}}
 \newenvironment{url-address}{\begin{center}\begin{tabular}{c||}}{\end{tabular}\end{center}}
 
+
+%\makeindex % برای ساختن نمایه
+
 \begin{document}
 %--title page--------------------------------------------------
 \pagebreak
@@ -94,17 +93,21 @@
 
 %\input{info}
 
+\shorttableofcontents{فهرست کوتاه مطالب}{0}
 \tableofcontents
 \newpage
 
 \input{license}
 \input{latest}
+\listoffigures
+\listoftables
 \input{preface}
 \pagenumbering{arabic}
-%\input{ch01}
+\input{ch01}
 %\input{ch02}
 %\input{ch03}
 %\input{ch04}
 \input{vajenameh-en-fa}
 \input{vajenameh-fa-en}
+%\printindex
 \end{document}
