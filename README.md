@@ -3,7 +3,7 @@
 `Ubuntu Comprehensive Manual` is going to be the official manual of Iranian Ubuntu Team. It uses [XePersian](http://www.ctan.org/tex-archive/macros/xetex/latex/xepersian/) (which is based on [XeTeX](https://en.wikipedia.org/wiki/Xetex)) as the tex engine for producing high quality manuals.
 
 ## Prerequisites
-The following are prerequisites to successful compilation of tex files.
+The following are prerequisites to successful compilation of tex files on GNU/Linux systems.
 ### Ubuntu, Trisquel
 
     $ sudo apt-get install texmaker texlive-xetex texlive-lang-arabic texlive-latex-recommended texlive-generic-extra
