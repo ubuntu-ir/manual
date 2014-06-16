@@ -19,3 +19,6 @@ The files could be easily compiled by runnig `Makefile`. On GNU/Linux systems yo
     $ cd /the/desired/directory
     $ chmod +x Makefile
     $ ./Makefile
+
+## Viewing PDF
+You can choose one among these free software PDF viewers, [PDFreaders.org](http://www.pdfreaders.org/)
